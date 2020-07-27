@@ -10,7 +10,7 @@ public:
 	
 	std::string getUrl() override
 	{
-		return "/sensor";
+		return "/sensors";
 	}
 
 	void handler(const httplib::Request& request, httplib::Response& response) override

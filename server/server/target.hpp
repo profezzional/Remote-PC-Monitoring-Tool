@@ -17,3 +17,15 @@
 #define TARGET_OSX
 #endif
 #endif
+
+
+// debug logging to console
+#if _DEBUG
+#ifndef DEBUG_LOG
+#define DEBUG_LOG(x) std::cout << (x) << std::endl
+#endif
+#else
+#ifndef DEBUG_LOG
+#define DEBUG_LOG(x)
+#endif
+#endif

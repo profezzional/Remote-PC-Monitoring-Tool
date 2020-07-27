@@ -15,7 +15,8 @@ public:
 	std::string getValue() override
 	{
 		// placeholder
-		return "Nothing to report...";
+		DEBUG_LOG("sensor executed");
+		return "It's just a placeholder, go away";
 	}
 
 	std::string getDesc() override
