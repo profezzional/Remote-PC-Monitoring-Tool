@@ -31,6 +31,15 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
+# Exclude binaries
+*.pdb
+*.exe
+*.vcxproj.user
+*.obj
+*.log
+*.lastbuildstate
+*.tlog
+
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
