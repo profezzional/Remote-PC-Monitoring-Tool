@@ -26,10 +26,19 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+
+# Exclude binaries
+*.pdb
+*.exe
+*.vcxproj.user
+*.obj
+*.log
+*.lastbuildstate
+*.tlog
+*.ilk
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
