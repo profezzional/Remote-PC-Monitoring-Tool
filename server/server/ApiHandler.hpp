@@ -9,8 +9,8 @@
 class ApiHandler
 {
 public:
-	virtual std::string getUrl() = NULL;
-	virtual void handler(const httplib::Request& request, httplib::Response& response) = NULL;
+	virtual std::string getUrl() = 0;
+	virtual void handler(const httplib::Request& request, httplib::Response& response) = 0;
 };
 
 extern std::vector<ApiHandler*> g_apiHandlers;
