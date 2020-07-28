@@ -363,3 +363,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/Remote-PC-Monitoring-Tool/MobileApp/package-lock.json
