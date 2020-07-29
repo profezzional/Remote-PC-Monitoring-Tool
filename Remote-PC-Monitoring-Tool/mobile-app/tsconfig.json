@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "sourceMap": true,
+    "target": "es5",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmitHelpers": true,
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+    "lib": [
+      "esnext",
+      "es2017",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/app/components/*"],
+      "services/*": ["src/app/services/*"],
+      "interfaces/*": ["src/app/interfaces/*"]
+    }
+  },
+  "include": [
+    "references.d.ts"
+  ],
+  "files": [
+    "./src/main.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "platforms"
+  ]
+}

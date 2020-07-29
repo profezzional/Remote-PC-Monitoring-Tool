@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server", "server\server.vcxproj", "{B773A9AB-7C68-4036-8A3A-53DA6E8A8C21}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "MobileApp", "MobileApp\MobileApp.njsproj", "{1158F721-831A-45A5-B2B5-20519AD647C2}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "MobileApp", "mobile-app\MobileApp.njsproj", "{1158F721-831A-45A5-B2B5-20519AD647C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

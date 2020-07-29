@@ -367,3 +367,5 @@ MigrationBackup/
 # Mobile App Project Files
 /Remote-PC-Monitoring-Tool/MobileApp/package-lock.json
 /Remote-PC-Monitoring-Tool/MobileApp/dist
+/Remote-PC-Monitoring-Tool/mobile-app/platforms/android
+/Remote-PC-Monitoring-Tool/mobile-app/package-lock.json
