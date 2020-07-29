@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>MobileApp</Name>
+    <RootNamespace>MobileApp</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>1158f721-831a-45a5-b2b5-20519ad647c2</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="App_Resources\" />
+    <Folder Include="App_Resources\Android\" />
+    <Folder Include="App_Resources\Android\src\" />
+    <Folder Include="App_Resources\Android\src\main\" />
+    <Folder Include="App_Resources\Android\src\main\res\" />
+    <Folder Include="App_Resources\Android\src\main\res\drawable-hdpi\" />
+    <Folder Include="App_Resources\Android\src\main\res\drawable-ldpi\" />
+    <Folder Include="App_Resources\Android\src\main\res\drawable-mdpi\" />
+    <Folder Include="App_Resources\Android\src\main\res\drawable-nodpi\" />
+    <Folder Include="App_Resources\Android\src\main\res\drawable-xhdpi\" />
+    <Folder Include="App_Resources\Android\src\main\res\drawable-xxhdpi\" />
+    <Folder Include="App_Resources\Android\src\main\res\drawable-xxxhdpi\" />
+    <Folder Include="App_Resources\Android\src\main\res\values-v21\" />
+    <Folder Include="App_Resources\Android\src\main\res\values-v29\" />
+    <Folder Include="App_Resources\Android\src\main\res\values\" />
+    <Folder Include="App_Resources\iOS\" />
+    <Folder Include="App_Resources\iOS\Assets.xcassets\" />
+    <Folder Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\" />
+    <Folder Include="App_Resources\iOS\Assets.xcassets\LaunchScreen.AspectFill.imageset\" />
+    <Folder Include="App_Resources\iOS\Assets.xcassets\LaunchScreen.Center.imageset\" />
+    <Folder Include="hooks\" />
+    <Folder Include="hooks\after-prepare\" />
+    <Folder Include="hooks\before-checkForChanges\" />
+    <Folder Include="src\" />
+    <Folder Include="src\app\" />
+    <Folder Include="src\app\components\dashboard\" />
+    <Folder Include="src\app\interfaces\" />
+    <Folder Include="src\app\components\" />
+    <Folder Include="src\app\services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".editorconfig" />
+    <Content Include=".gitignore" />
+    <Content Include="angular.json" />
+    <Content Include="App_Resources\Android\app.gradle" />
+    <Content Include="App_Resources\Android\src\main\AndroidManifest.xml" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-hdpi\background.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-hdpi\icon.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-hdpi\logo.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-ldpi\background.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-ldpi\icon.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-ldpi\logo.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-mdpi\background.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-mdpi\icon.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-mdpi\logo.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-nodpi\splash_screen.xml" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-xhdpi\background.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-xhdpi\icon.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-xhdpi\logo.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-xxhdpi\background.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-xxhdpi\icon.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-xxhdpi\logo.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-xxxhdpi\background.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-xxxhdpi\icon.png" />
+    <Content Include="App_Resources\Android\src\main\res\drawable-xxxhdpi\logo.png" />
+    <Content Include="App_Resources\Android\src\main\res\values-v21\colors.xml" />
+    <Content Include="App_Resources\Android\src\main\res\values-v21\styles.xml" />
+    <Content Include="App_Resources\Android\src\main\res\values-v29\styles.xml" />
+    <Content Include="App_Resources\Android\src\main\res\values\colors.xml" />
+    <Content Include="App_Resources\Android\src\main\res\values\styles.xml" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-1024.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-20%402x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-20%403x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-20.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-29%402x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-29%403x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-29.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-40%402x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-40%403x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-40.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-60%402x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-60%403x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-76%402x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-76.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\AppIcon.appiconset\icon-83.5%402x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\Contents.json" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\LaunchScreen.AspectFill.imageset\Contents.json" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\LaunchScreen.AspectFill.imageset\LaunchScreen-AspectFill%402x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\LaunchScreen.AspectFill.imageset\LaunchScreen-AspectFill%403x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\LaunchScreen.AspectFill.imageset\LaunchScreen-AspectFill.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\LaunchScreen.Center.imageset\Contents.json" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\LaunchScreen.Center.imageset\LaunchScreen-Center%402x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\LaunchScreen.Center.imageset\LaunchScreen-Center%403x.png" />
+    <Content Include="App_Resources\iOS\Assets.xcassets\LaunchScreen.Center.imageset\LaunchScreen-Center.png" />
+    <Content Include="App_Resources\iOS\build.xcconfig" />
+    <Content Include="App_Resources\iOS\Info.plist" />
+    <Content Include="App_Resources\iOS\LaunchScreen.storyboard" />
+    <Content Include="hooks\after-prepare\nativescript-dev-webpack.js" />
+    <Content Include="hooks\before-checkForChanges\nativescript-core.js" />
+    <Content Include="hooks\before-checkForChanges\nativescript-dev-webpack.js" />
+    <Content Include="ngcc.config.js" />
+    <Content Include="nsconfig.json" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="src\app.css" />
+    <Content Include="src\app\app.component.scss" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\components\dashboard\dashboard.component.scss" />
+    <Content Include="src\package.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tsconfig.tns.json" />
+    <Content Include="tsfmt.json" />
+    <Content Include="webpack.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="references.d.ts" />
+    <TypeScriptCompile Include="src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\components\dashboard\dashboard.component.html" />
+    <TypeScriptCompile Include="src\app\components\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="src\app\interfaces\data.interface.ts" />
+    <TypeScriptCompile Include="src\app\services\data.service.ts" />
+    <TypeScriptCompile Include="src\app\services\services.module.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

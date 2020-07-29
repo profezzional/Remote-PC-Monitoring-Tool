@@ -1,0 +1,5 @@
+cmake_minimum_required (VERSION 2.8.11)
+project (server_linux)
+set(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_CXX_FLAGS -pthread)
+add_executable (server_linux server/entrypoint.cpp server/ApiHandler.cpp server/SensorApi.cpp)
