@@ -1,6 +1,6 @@
-[submodule "cpp-httplib"]
-	path = cpp-httplib
+[submodule "Remote-PC-Monitoring-Tool/server/cpp-httplib"]
+	path = Remote-PC-Monitoring-Tool/server/cpp-httplib
 	url = https://github.com/yhirose/cpp-httplib
-[submodule "json"]
-	path = json
+[submodule "Remote-PC-Monitoring-Tool/server/json"]
+	path = Remote-PC-Monitoring-Tool/server/json
 	url = https://github.com/nlohmann/json
