@@ -1,5 +1,16 @@
 #!/bin/bash
 
+if ! command -v git &> /dev/null
+then
+    echo "Git does not appear to be installed." 
+    exit 1
+fi
+
+echo "Updating Submodules"
+git submodule init
+git submodule update
+
+
 if ! command -v cmake &> /dev/null
 then
     echo "CMake does not appear to be installed." 
