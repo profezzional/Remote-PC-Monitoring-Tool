@@ -1,6 +1,9 @@
 # Adding Sensors
 
-1. Right click the `Sensors` filter, add a new file ![](devenv_u8LlQXG9mc.png)
+1. Right click the `Sensors` filter, add a new file 
+
+![](devenv_u8LlQXG9mc.png)
+
 2. Select `Header File (.h)`, and give it a name.
 3. Copy the contents of `PlaceholderSensor.hpp` into your new file.
 

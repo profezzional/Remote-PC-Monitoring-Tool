@@ -2,13 +2,19 @@
 Cross-platform desktop client/server and mobile app to display and monitor PC vitals and stats
 
 
+# Developer Docs
+
+### [Adding Sensors](docs/AddingSensors.md)
+
 # Build Guide
 
 ## Windows:
 
 ### Requirements:
 * [Git](https://git-scm.com/download/win)
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/community/) with `Desktop Development with C++` Workload selected: ![See here](https://github.com/profezzional/Remote-PC-Monitoring-Tool/blob/colton_dev/docs/vs_installershell_UescUGq5ae.png?raw=true)
+* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/community/) with `Desktop Development with C++` Workload selected: 
+
+![See here](docs/vs_installershell_UescUGq5ae.png)
 
 ### Building:
 ```
