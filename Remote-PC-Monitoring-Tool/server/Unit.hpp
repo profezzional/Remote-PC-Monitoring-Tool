@@ -3,7 +3,7 @@
 #include <vector>
 #include "json.hpp"
 
-enum class UnitEnum
+enum UnitEnum
 {
 	Percentage = 0,
 	StorageGb = 1,
@@ -18,7 +18,7 @@ public:
 	std::string abbreviation;
 	std::string unitName;
 
-	static Unit* Get(enum class UnitEnum);
+	static Unit* Get(enum UnitEnum);
 	
 	nlohmann::json toJson();
 	static std::vector<Unit> g_Units;

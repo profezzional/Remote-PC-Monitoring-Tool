@@ -9,7 +9,7 @@ nlohmann::json Unit::toJson()
 	return j;
 }
 
-Unit* Unit::Get(enum class UnitEnum unitEnum)
+Unit* Unit::Get(enum UnitEnum unitEnum)
 {
 	const int index = static_cast<int>(unitEnum);
 	if (index > Unit::g_Units.size())

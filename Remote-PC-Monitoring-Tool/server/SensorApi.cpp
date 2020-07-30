@@ -5,6 +5,8 @@
 #include "CPUUsageSensor.hpp"
 #include "MemoryUtilizationSensor.hpp"
 #include "CPUTemperature.hpp"
+#include "GPUUsageSensor.hpp"
+#include "GPUTemperatureSensor.hpp"
 
 // then add them to the vector
 std::vector<Sensor*> g_sensors = {
@@ -12,4 +14,6 @@ std::vector<Sensor*> g_sensors = {
 	new CPUUsageSensor(),
 	new MemoryUtilizationSensor(),
 	new CPUTemperatureSensor(),
+	new GPUUsageSensor(),
+	new GPUTemperatureSensor(),
 };

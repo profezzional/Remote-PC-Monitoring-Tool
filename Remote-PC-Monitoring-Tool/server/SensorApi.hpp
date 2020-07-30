@@ -15,6 +15,7 @@ public:
 
 	void handler(const httplib::Request& request, httplib::Response& response) override
 	{
+		DEBUG_LOG(this->getUrl() << " Accessed from " << request.remote_addr);
 		nlohmann::json sensorArray;
 		for(Sensor* sensor : g_sensors)
 		{
