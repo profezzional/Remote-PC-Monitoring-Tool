@@ -1,5 +1,16 @@
 @echo off
 
+WHERE git
+if %ERRORLEVEL% NEQ 0 (
+    echo Git not found, submodules will not be initialized
+    pause
+) else (
+    echo Initializing submodules
+    git submodule init
+    git submodule update
+)
+
+
 REM Hardcode some paths to MSBuild.exe
 SET msbuildpath="C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe"
 if exist %msbuildpath% (
