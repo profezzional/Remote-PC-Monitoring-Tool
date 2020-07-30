@@ -8,6 +8,12 @@
 3. Copy the contents of `PlaceholderSensor.hpp` into your new file.
 
 ```cpp
+#pragma once
+#include "Sensor.hpp"
+
+// copy/paste this class for new sensors
+// then, in SensorApi.cpp, include your new file, and add an instance of your sensor to g_sensors
+
 class PlaceholderSensor /* <- Rename this */: public Sensor
 {
 public:
