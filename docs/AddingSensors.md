@@ -49,3 +49,25 @@ public:
 4. Rename where the above comments are, and add your code to `getValue()`.
 5. Open `SensorApi.cpp`, and `#include` your sensor file.
 6. Add a new instance of your sensor to the static vector of sensors.
+
+```cpp
+// include your sensors here
+#include "PlaceholderSensor.hpp"
+#include "CPUUsageSensor.hpp"
+#include "MemoryUtilizationSensor.hpp"
+#include "CPUTemperature.hpp"
+#include "GPUUsageSensor.hpp"
+#include "GPUTemperatureSensor.hpp"
+#include "MyNewSensor.hpp" // <- The header file of your new sensor
+
+// then add them to the vector
+std::vector<Sensor*> g_sensors = {
+	new PlaceholderSensor(),
+	new CPUUsageSensor(),
+	new MemoryUtilizationSensor(),
+	new CPUTemperatureSensor(),
+	new GPUUsageSensor(),
+	new GPUTemperatureSensor(),
+    new MyNewSensor(), // <- The class name of your new sensor
+};
+```
