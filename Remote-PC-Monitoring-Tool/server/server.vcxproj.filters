@@ -48,6 +48,12 @@
     <ClInclude Include="MemoryUtilizationSensor.hpp">
       <Filter>Header Files\API Handler\Sensors</Filter>
     </ClInclude>
+    <ClInclude Include="Unit.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPUTemperature.hpp">
+      <Filter>Header Files\API Handler\Sensors</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="entrypoint.cpp">
@@ -58,6 +64,9 @@
     </ClCompile>
     <ClCompile Include="SensorApi.cpp">
       <Filter>Header Files\API Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

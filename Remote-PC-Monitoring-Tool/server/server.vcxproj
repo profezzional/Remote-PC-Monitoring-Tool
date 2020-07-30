@@ -84,6 +84,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ApiHandler.hpp" />
+    <ClInclude Include="CPUTemperature.hpp" />
     <ClInclude Include="CPUUsageSensor.hpp" />
     <ClInclude Include="httplib.h" />
     <ClInclude Include="json.hpp" />
@@ -92,11 +93,13 @@
     <ClInclude Include="Sensor.hpp" />
     <ClInclude Include="SensorApi.hpp" />
     <ClInclude Include="target.hpp" />
+    <ClInclude Include="Unit.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ApiHandler.cpp" />
     <ClCompile Include="entrypoint.cpp" />
     <ClCompile Include="SensorApi.cpp" />
+    <ClCompile Include="Unit.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

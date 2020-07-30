@@ -5,18 +5,30 @@
 class MemoryUtilizationSensor : public Sensor
 {
 public:
-	std::string getName() override
+	std::string_view getName() override
+	{
+		return "memUtili";
+	}
+
+	std::string_view getPrettyName() override
 	{
 		return "Memory Utilization";
 	}
 
-	std::string getValue() override
+	UnitEnum getUnit() override
 	{
-		// placeholder
-		return std::to_string(.25f);
+		return UnitEnum::Percentage;
 	}
 
-	std::string getDesc() override
+	nlohmann::json getValue() override
+	{
+		nlohmann::json j;
+		j["value"] = 0.125;
+		j["success"] = true;
+		return j;
+	}
+
+	std::string_view getDesc() override
 	{
 		return "Shows the current memory utilization";
 	}

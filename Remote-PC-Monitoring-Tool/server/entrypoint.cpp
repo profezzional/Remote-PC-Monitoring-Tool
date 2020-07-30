@@ -10,7 +10,7 @@ int main(int argc, char** argv)
 
     for (ApiHandler* pApi : g_apiHandlers)
     {
-        svr.Get(pApi->getUrl().c_str(), [&pApi](const httplib::Request& request, httplib::Response& response)
+        svr.Get(pApi->getUrl().data(), [&pApi](const httplib::Request& request, httplib::Response& response)
         {
             pApi->handler(request, response);
         });
