@@ -38,3 +38,19 @@ if [ -f server_linux ]; then
     echo "Output file located, moving"
     mv server_linux ./bin/server_linux
 fi
+
+
+if ! command -v node &> /dev/null
+then
+    echo "npm not found, please install it to build the app" 
+    exit 1
+fi
+
+if ! command -v tns &> /dev/null
+then
+    echo "nativescript not found, please install it to build the app" 
+    exit 1
+fi
+
+
+tns build android --path ./Remote-PC-Monitoring-Tool/mobile-app --copy-to bin
