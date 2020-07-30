@@ -8,7 +8,7 @@ Cross-platform desktop client/server and mobile app to display and monitor PC vi
 
 ### Requirements:
 * [Git](https://git-scm.com/download/win)
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/community/) with `Desktop Development win C++` Workload selected
+* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/community/) with `Desktop Development with C++` Workload selected: !(See here)[docs/vs_installershell_UescUGq5ae.png]
 
 ### Building:
 ```
