@@ -54,6 +54,12 @@
     <ClInclude Include="CPUTemperature.hpp">
       <Filter>Header Files\API Handler\Sensors</Filter>
     </ClInclude>
+    <ClInclude Include="GPUUsageSensor.hpp">
+      <Filter>Header Files\API Handler\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUTemperatureSensor.hpp">
+      <Filter>Header Files\API Handler\Sensors</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="entrypoint.cpp">

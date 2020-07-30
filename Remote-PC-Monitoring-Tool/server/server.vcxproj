@@ -86,6 +86,8 @@
     <ClInclude Include="ApiHandler.hpp" />
     <ClInclude Include="CPUTemperature.hpp" />
     <ClInclude Include="CPUUsageSensor.hpp" />
+    <ClInclude Include="GPUTemperatureSensor.hpp" />
+    <ClInclude Include="GPUUsageSensor.hpp" />
     <ClInclude Include="httplib.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="MemoryUtilizationSensor.hpp" />
