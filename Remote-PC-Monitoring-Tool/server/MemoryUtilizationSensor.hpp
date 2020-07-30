@@ -5,12 +5,12 @@
 class MemoryUtilizationSensor : public Sensor
 {
 public:
-	std::string getName() override
+	std::string_view getName() override
 	{
 		return "memUtili";
 	}
 
-	std::string getPrettyName() override
+	std::string_view getPrettyName() override
 	{
 		return "Memory Utilization";
 	}
@@ -28,7 +28,7 @@ public:
 		return j;
 	}
 
-	std::string getDesc() override
+	std::string_view getDesc() override
 	{
 		return "Shows the current memory utilization";
 	}

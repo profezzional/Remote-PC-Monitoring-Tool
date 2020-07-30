@@ -4,12 +4,12 @@
 class CPUTemperatureSensor : public Sensor
 {
 public:
-	std::string getName() override
+	std::string_view getName() override
 	{
 		return "cpuTemp";
 	}
 
-	std::string getPrettyName() override
+	std::string_view getPrettyName() override
 	{
 		return "CPU Temperature";
 	}
@@ -27,7 +27,7 @@ public:
 		return j;
 	}
 
-	std::string getDesc() override
+	std::string_view getDesc() override
 	{
 		return "Returns the current CPU temperature in C";
 	}

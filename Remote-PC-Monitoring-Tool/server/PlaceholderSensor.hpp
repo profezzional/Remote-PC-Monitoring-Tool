@@ -7,12 +7,12 @@
 class PlaceholderSensor : public Sensor
 {
 public:
-	std::string getName() override
+	std::string_view getName() override
 	{
 		return "placeholder";
 	}
 
-	std::string getPrettyName() override
+	std::string_view getPrettyName() override
 	{
 		return "Placeholder Sensor";
 	}
@@ -30,7 +30,7 @@ public:
 		return j;
 	}
 
-	std::string getDesc() override
+	std::string_view getDesc() override
 	{
 		return "Doesn't actually do anything...";
 	}

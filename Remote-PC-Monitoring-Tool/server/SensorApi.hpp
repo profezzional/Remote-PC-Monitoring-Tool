@@ -8,7 +8,7 @@ class SensorApiHandler : public ApiHandler
 {
 public:
 	
-	std::string getUrl() override
+	std::string_view getUrl() override
 	{
 		return "/sensors";
 	}
@@ -22,7 +22,7 @@ public:
 			sensorData["desc"] = sensor->getDesc();
 			sensorData["name"] = sensor->getPrettyName();
 			sensorData["unit"] = sensor->getUnit();
-			sensorArray[sensor->getName()] = sensorData;
+			sensorArray[sensor->getName().data()] = sensorData;
 		}
 		nlohmann::json unitArray;
 		for(Unit& unit : Unit::g_Units)
