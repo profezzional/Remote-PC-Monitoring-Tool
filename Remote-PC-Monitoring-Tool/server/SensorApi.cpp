@@ -4,11 +4,12 @@
 #include "PlaceholderSensor.hpp"
 #include "CPUUsageSensor.hpp"
 #include "MemoryUtilizationSensor.hpp"
-
+#include "CPUTemperature.hpp"
 
 // then add them to the vector
 std::vector<Sensor*> g_sensors = {
 	new PlaceholderSensor(),
 	new CPUUsageSensor(),
 	new MemoryUtilizationSensor(),
+	new CPUTemperatureSensor(),
 };

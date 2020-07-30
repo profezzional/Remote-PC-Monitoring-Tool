@@ -15,12 +15,29 @@ public:
 
 	void handler(const httplib::Request& request, httplib::Response& response) override
 	{
-		nlohmann::json j;
+		nlohmann::json sensorArray;
 		for(Sensor* sensor : g_sensors)
 		{
-			j[sensor->getName()] = sensor->getValue();
+			nlohmann::json sensorData = sensor->getValue();
+			sensorData["desc"] = sensor->getDesc();
+			sensorData["name"] = sensor->getPrettyName();
+			sensorData["unit"] = sensor->getUnit();
+			sensorArray[sensor->getName()] = sensorData;
 		}
-		response.set_content(j.dump(4), "application/json");
+		nlohmann::json unitArray;
+		for(Unit& unit : Unit::g_Units)
+		{
+			unitArray.push_back(unit.toJson());
+		}
+		nlohmann::json outputArray;
+		outputArray["sensors"] = sensorArray;
+		outputArray["units"] = unitArray;
+
+#ifdef _DEBUG
+		response.set_content(outputArray.dump(4), "application/json");
+#else
+		response.set_content(outputArray.dump(), "application/json");
+#endif
 	}
 };
 

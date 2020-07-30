@@ -9,14 +9,25 @@ class PlaceholderSensor : public Sensor
 public:
 	std::string getName() override
 	{
-		return "Placeholder Sensor";
+		return "placeholder";
 	}
 
-	std::string getValue() override
+	std::string getPrettyName() override
 	{
-		// placeholder
-		DEBUG_LOG("sensor executed");
-		return "It's just a placeholder, go away";
+		return "Placeholder Sensor";
+	}
+	
+	UnitEnum getUnit() override
+	{
+		return UnitEnum::Percentage;
+	}
+	
+	nlohmann::json getValue() override
+	{
+		nlohmann::json j;
+		j["value"] = 0.125;
+		j["success"] = true;
+		return j;
 	}
 
 	std::string getDesc() override
