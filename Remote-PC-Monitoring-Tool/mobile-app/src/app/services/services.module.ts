@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { DataService } from './data.service';
+import { SettingsService } from './settings.service';
 
 
 export const providers = [
-    DataService
+    DataService,
+    SettingsService
 ];
 
 @NgModule({

@@ -15,9 +15,10 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "components/*": ["src/app/components/*"],
-      "services/*": ["src/app/services/*"],
-      "interfaces/*": ["src/app/interfaces/*"]
+      "~/*": ["app/*"],
+      "components/*": [ "src/app/components/*" ],
+      "services/*": [ "src/app/services/*" ],
+      "interfaces/*": [ "src/app/interfaces/*" ]
     }
   },
   "include": [

@@ -1,71 +1,21 @@
-import { DataResponse } from 'interfaces/data.interface';
+import { Injectable } from '@angular/core';
+import { request as HttpRequest, HttpResponse } from 'tns-core-modules/http';
+
+import { SensorData, DataResponse } from 'interfaces/data.interface';
+import { SettingsService } from 'services/settings.service';
 
 
+@Injectable()
 export class DataService {
-    public constructor() {
+    public constructor(private settingsService: SettingsService) {
 
     }
 
     public async getData(): Promise<DataResponse> {
-        return {
-            cpu: {
-                usage: {
-                    name: 'CPU Usage',
-                    value: 0.5,
-                    unit: {
-                        name: 'Percentage',
-                        abbreviation: '%',
-                        units: 'Percent'
-                    }
-                },
-                speed: {
-                    name: 'CPU Frequency',
-                    value: 5.1,
-                    unit: {
-                        name: 'Gigahertz',
-                        abbreviation: 'GHz',
-                        units: 'Gigahertz'
-                    }
-                },
-                temp: {
-                    name: 'CPU Temperature',
-                    value: 65,
-                    unit: {
-                        name: 'Celsius',
-                        abbreviation: 'C',
-                        units: 'Degrees'
-                    }
-                }
-            },
-            memory: {
-                usage: {
-                    name: 'Memory Usage',
-                    value: 0.37,
-                    unit: {
-                        name: 'Percentage',
-                        abbreviation: '%',
-                        units: 'Percent'
-                    }
-                },
-                speed: {
-                    name: 'Memory Frequency',
-                    value: 3.385,
-                    unit: {
-                        name: 'Gigahertz',
-                        abbreviation: 'GHz',
-                        units: 'Gigahertz'
-                    }
-                },
-                temp: {
-                    name: 'Memory Temperature',
-                    value: 50.5,
-                    unit: {
-                        name: 'Celsius',
-                        abbreviation: 'C',
-                        units: 'Degrees'
-                    }
-                }
-            },
-        };
+        const host: string = this.settingsService.networkSettings.host || (org as any).broadcast.GetBroadcast.getBroadcast();
+        const url: string = `http://${host}${this.settingsService.networkSettings.port ? ':' + this.settingsService.networkSettings.port : ''}/sensors`;
+        const response: HttpResponse = await HttpRequest({ url, method: 'GET' });
+
+        return response.statusCode === 200 ? { data: (response.content.toJSON() as SensorData), error: null } : { data: null, error: response.content.toString() };
     }
 }
