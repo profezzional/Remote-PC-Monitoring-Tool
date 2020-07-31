@@ -1,18 +1,17 @@
 #pragma once
 #include "Sensor.hpp"
 
-
-class MemoryUtilizationSensor : public Sensor
+class GPUUsageSensor : public Sensor
 {
 public:
 	std::string_view getName() override
 	{
-		return "memUtili";
+		return "gpuUsage";
 	}
 
 	std::string_view getPrettyName() override
 	{
-		return "Memory Utilization";
+		return "GPU Usage";
 	}
 
 	UnitEnum getUnit() override
@@ -30,6 +29,6 @@ public:
 
 	std::string_view getDesc() override
 	{
-		return "Shows the current memory utilization";
+		return "Current utilization of the main GPU, as a percentage";
 	}
 };

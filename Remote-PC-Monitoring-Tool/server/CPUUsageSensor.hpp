@@ -4,19 +4,31 @@
 class CPUUsageSensor : public Sensor
 {
 public:
-	std::string getName() override
+	std::string_view getName() override
+	{
+		return "cpuUsage";
+	}
+
+	std::string_view getPrettyName() override
 	{
 		return "CPU Usage";
 	}
 	
-	std::string getValue() override
+	UnitEnum getUnit() override
 	{
-		// placeholder
-		return std::to_string(.50f);
+		return UnitEnum::Percentage;
+	}
+
+	nlohmann::json getValue() override
+	{
+		nlohmann::json j;
+		j["value"] = 0.125;
+		j["success"] = true;
+		return j;
 	}
 	
-	std::string getDesc() override
+	std::string_view getDesc() override
 	{
-		return "Current utilization of the CPU";
+		return "Current utilization of the CPU, as a percentage";
 	}
 };

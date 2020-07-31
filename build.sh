@@ -1,8 +1,56 @@
-if which python > /dev/null 2>&1;
+#!/bin/bash
+
+if ! command -v git &> /dev/null
 then
-    python scripts/build.py
-else
-    echo "Python does not appear to be installed, looks like you'll have to compile manually."
+    echo "Git does not appear to be installed." 
+    exit 1
+fi
+
+echo "Updating Submodules"
+git submodule init
+git submodule update
+
+
+if ! command -v cmake &> /dev/null
+then
+    echo "CMake does not appear to be installed." 
+    exit 1
+fi
+
+if ! command -v make &> /dev/null
+then
+    echo "Make does not appear to be installed." 
+    exit 1
+fi
+
+# set up directories
+rm -f CMakeCache.txt
+cmake ./Remote-PC-Monitoring-Tool/server && make
+
+# remove old binary, if it exists
+if [ -f ./bin/server_linux ]; then
+    echo "Removing old binary"
+    rm -f ./bin/server_linux
+fi
+
+# move new binary
+if [ -f server_linux ]; then
+    echo "Output file located, moving"
+    mv server_linux ./bin/server_linux
 fi
 
 
+if ! command -v node &> /dev/null
+then
+    echo "npm not found, please install it to build the app" 
+    exit 1
+fi
+
+if ! command -v tns &> /dev/null
+then
+    echo "nativescript not found, please install it to build the app" 
+    exit 1
+fi
+
+
+tns build android --path ./Remote-PC-Monitoring-Tool/mobile-app --copy-to bin
