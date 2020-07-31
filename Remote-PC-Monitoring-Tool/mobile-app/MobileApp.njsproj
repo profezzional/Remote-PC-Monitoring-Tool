@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".editorconfig" />
-    <Content Include=".gitignore" />
     <Content Include="angular.json" />
     <Content Include="App_Resources\Android\app.gradle" />
     <Content Include="App_Resources\Android\src\main\AndroidManifest.xml" />
