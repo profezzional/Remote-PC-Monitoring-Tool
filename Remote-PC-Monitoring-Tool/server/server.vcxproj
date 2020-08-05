@@ -95,12 +95,14 @@
     <ClInclude Include="Sensor.hpp" />
     <ClInclude Include="SensorApi.hpp" />
     <ClInclude Include="target.hpp" />
+    <ClInclude Include="UDPServer.hpp" />
     <ClInclude Include="Unit.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ApiHandler.cpp" />
     <ClCompile Include="entrypoint.cpp" />
     <ClCompile Include="SensorApi.cpp" />
+    <ClCompile Include="UDPServer.cpp" />
     <ClCompile Include="Unit.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

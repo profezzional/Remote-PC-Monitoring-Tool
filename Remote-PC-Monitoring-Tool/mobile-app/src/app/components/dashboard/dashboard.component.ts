@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DataService } from 'services/data.service';
-import { DataResponse } from '../../interfaces/data.interface';
+import { SensorData } from 'interfaces/data.interface';
 
 
 @Component({
@@ -10,13 +10,17 @@ import { DataResponse } from '../../interfaces/data.interface';
     styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-    private data: string;
+    private data: SensorData;
 
     public constructor(private dataService: DataService) {
 
     }
 
     public ngOnInit(): void {
-        this.dataService.getData().then(dataResponse => this.data = JSON.stringify(dataResponse));
+        this.getData();
+    }
+
+    private async getData(): Promise<void> {
+        console.log('end result:', await this.dataService.getData());
     }
 }

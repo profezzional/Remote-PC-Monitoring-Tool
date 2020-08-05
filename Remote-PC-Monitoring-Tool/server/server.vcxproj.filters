@@ -54,6 +54,9 @@
     <ClInclude Include="GPUTemperatureSensor.hpp">
       <Filter>Header Files\API Handler\Sensors</Filter>
     </ClInclude>
+    <ClInclude Include="UDPServer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="entrypoint.cpp">
@@ -66,6 +69,9 @@
       <Filter>Header Files\API Handler</Filter>
     </ClCompile>
     <ClCompile Include="Unit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UDPServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
