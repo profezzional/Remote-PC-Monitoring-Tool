@@ -7,6 +7,7 @@
 #include <thread>
 #include <iostream>
 
+
 int main(int argc, char** argv)
 {
     httplib::Server svr;
@@ -14,7 +15,7 @@ int main(int argc, char** argv)
     for (ApiHandler* pApi : g_apiHandlers)
     {
         DEBUG_LOG("API: " << pApi->getUrl());
-        svr.Get(pApi->getUrl().data(), [&pApi](const httplib::Request& request, httplib::Response& response)
+        svr.Get(pApi->getUrl().data(), [pApi](const httplib::Request& request, httplib::Response& response)
         {
             pApi->handler(request, response);
         });
@@ -44,7 +45,6 @@ int main(int argc, char** argv)
 
 	
     svr.listen("0.0.0.0", 1234);
-
 	std::cout << "done" << std::endl;
 	std::cin.get();
 	return 0;

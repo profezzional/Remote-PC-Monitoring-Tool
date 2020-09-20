@@ -24,6 +24,7 @@ std::vector<Unit> Unit::g_Units = {
 	{ "percent", "%", "Percentage" },
 	{ "storageGb", "GB", "Gigabytes" },
 	{ "storageMb", "MB", "Megabytes" },
-	{"temperature", "&#176", "Degrees"}
+	{"temperature", "&#176", "Degrees"},
+	{ "array", "?", "Array"}
 };
 

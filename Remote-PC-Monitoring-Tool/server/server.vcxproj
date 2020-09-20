@@ -46,12 +46,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)..\bin\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\$(ProjectName)\json\single_include\nlohmann;$(SolutionDir)\$(ProjectName)\cpp-httplib\</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\$(ProjectName)\json\single_include\nlohmann;$(SolutionDir)\$(ProjectName)\cpp-httplib\;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)..\bin\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\$(ProjectName)\json\single_include\nlohmann;$(SolutionDir)\$(ProjectName)\cpp-httplib\</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\$(ProjectName)\json\single_include\nlohmann;$(SolutionDir)\$(ProjectName)\cpp-httplib\;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -88,12 +90,18 @@
     <ClInclude Include="ApiHandler.hpp" />
     <ClInclude Include="CPUTemperature.hpp" />
     <ClInclude Include="CPUUsageSensor.hpp" />
+    <ClInclude Include="GPUMemorySensor.hpp" />
     <ClInclude Include="GPUTemperatureSensor.hpp" />
     <ClInclude Include="GPUUsageSensor.hpp" />
+    <ClInclude Include="GraphicsCard.hpp" />
+    <ClInclude Include="IndividualSensorApi.hpp" />
     <ClInclude Include="MemoryUtilizationSensor.hpp" />
+    <ClInclude Include="NativeLoader.hpp" />
+    <ClInclude Include="NvidiaGpu.hpp" />
     <ClInclude Include="PlaceholderSensor.hpp" />
     <ClInclude Include="Sensor.hpp" />
     <ClInclude Include="SensorApi.hpp" />
+    <ClInclude Include="SensorListApi.hpp" />
     <ClInclude Include="target.hpp" />
     <ClInclude Include="UDPServer.hpp" />
     <ClInclude Include="Unit.hpp" />
@@ -101,6 +109,7 @@
   <ItemGroup>
     <ClCompile Include="ApiHandler.cpp" />
     <ClCompile Include="entrypoint.cpp" />
+    <ClCompile Include="GraphicsCard.cpp" />
     <ClCompile Include="SensorApi.cpp" />
     <ClCompile Include="UDPServer.cpp" />
     <ClCompile Include="Unit.cpp" />

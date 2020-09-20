@@ -2,21 +2,37 @@
 Cross-platform desktop client/server and mobile app to display and monitor PC vitals and stats
 
 
-# Developer Docs
+## Sensor Status:
+| Sensor | Status |
+| --- | --- |
+| CPU Temp | Placeholder |
+| CPU Usage | Placeholder |
+| GPU Memory | Complete |
+| GPU Temperature | In-Dev |
+| GPU Usage | Placeholder |
+| Memory Usage | Placeholder |
+
+## Developer Docs
 
 ### [Adding Sensors](docs/AddingSensors.md)
 
-# Build Guide
+## Build Guide
 
-## Windows:
+### Windows:
 
-### Requirements:
+#### Status:
+| Build Source | Status |
+| --- | --- |
+| Visual Studio | Working |
+| Batch File | Not Working |
+
+#### Requirements:
 * [Git](https://git-scm.com/download/win)
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/community/) with `Desktop Development with C++` Workload selected: 
 
 ![See here](docs/vs_installershell_UescUGq5ae.png)
 
-### Building:
+#### Building:
 ```
 git clone https://github.com/profezzional/Remote-PC-Monitoring-Tool
 cd Remote-PC-Monitoring-Tool
@@ -24,15 +40,15 @@ build.bat
 ```
 
 
-## Linux/OSX:
+### Linux/OSX:
 
-### Requirements:
+#### Requirements:
 * Git (`sudo apt install git`)
 * CMake (`sudo apt install cmake`)
 * Make (`sudo apt install make`)
 * G++ (`sudo apt install g++`)
 
-### Building:
+#### Building:
 ```
 git clone https://github.com/profezzional/Remote-PC-Monitoring-Tool
 cd Remote-PC-Monitoring-Tool

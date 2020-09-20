@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="server_linux"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/colton/Repos/Remote-PC-Monitoring-Tool"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/colton/Repos/Remote-PC-Monitoring-Tool"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/colton/Repos/Remote-PC-Monitoring-Tool"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_linux">
+				<Option output="/home/colton/Repos/Remote-PC-Monitoring-Tool/server_linux" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/colton/Repos/Remote-PC-Monitoring-Tool"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/./cpp-httplib"/>
+					<Add directory="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/./json/single_include/nlohmann"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 server_linux"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server_linux/fast">
+				<Option output="/home/colton/Repos/Remote-PC-Monitoring-Tool/server_linux" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/colton/Repos/Remote-PC-Monitoring-Tool"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/./cpp-httplib"/>
+					<Add directory="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/./json/single_include/nlohmann"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 server_linux/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/colton/Repos/Remote-PC-Monitoring-Tool/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/ApiHandler.cpp">
+			<Option target="server_linux"/>
+		</Unit>
+		<Unit filename="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/ApiHandler.hpp">
+			<Option target="server_linux"/>
+		</Unit>
+		<Unit filename="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/SensorApi.cpp">
+			<Option target="server_linux"/>
+		</Unit>
+		<Unit filename="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/SensorApi.hpp">
+			<Option target="server_linux"/>
+		</Unit>
+		<Unit filename="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/UDPServer.cpp">
+			<Option target="server_linux"/>
+		</Unit>
+		<Unit filename="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/UDPServer.hpp">
+			<Option target="server_linux"/>
+		</Unit>
+		<Unit filename="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/Unit.cpp">
+			<Option target="server_linux"/>
+		</Unit>
+		<Unit filename="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/Unit.hpp">
+			<Option target="server_linux"/>
+		</Unit>
+		<Unit filename="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/entrypoint.cpp">
+			<Option target="server_linux"/>
+		</Unit>
+		<Unit filename="/home/colton/Repos/Remote-PC-Monitoring-Tool/Remote-PC-Monitoring-Tool/server/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

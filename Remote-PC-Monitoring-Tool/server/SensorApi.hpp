@@ -10,7 +10,7 @@ public:
 	
 	std::string_view getUrl() override
 	{
-		return "/sensors";
+		return "/sensorValues";
 	}
 
 	void handler(const httplib::Request& request, httplib::Response& response) override
@@ -19,25 +19,14 @@ public:
 		nlohmann::json sensorArray;
 		for(Sensor* sensor : g_sensors)
 		{
-			nlohmann::json sensorData = sensor->getValue();
-			sensorData["desc"] = sensor->getDesc();
-			sensorData["name"] = sensor->getPrettyName();
-			sensorData["unit"] = sensor->getUnit();
-			sensorArray[sensor->getName().data()] = sensorData;
+			sensorArray[sensor->getName().data()] = sensor->getValue();
 		}
-		nlohmann::json unitArray;
-		for(Unit& unit : Unit::g_Units)
-		{
-			unitArray.push_back(unit.toJson());
-		}
-		nlohmann::json outputArray;
-		outputArray["sensors"] = sensorArray;
-		outputArray["units"] = unitArray;
+	
 
 #ifdef _DEBUG
-		response.set_content(outputArray.dump(4), "application/json");
+		response.set_content(sensorArray.dump(4), "application/json");
 #else
-		response.set_content(outputArray.dump(), "application/json");
+		response.set_content(sensorArray.dump(), "application/json");
 #endif
 	}
 };

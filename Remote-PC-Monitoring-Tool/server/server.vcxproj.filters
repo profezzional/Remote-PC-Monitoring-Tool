@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
@@ -18,6 +18,9 @@
     </Filter>
     <Filter Include="Header Files\API Handler\Sensors">
       <UniqueIdentifier>{84014d23-6df8-4e45-bb5b-bbc643cddd9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GPUs">
+      <UniqueIdentifier>{e0797206-df97-488c-9a85-dd48ebf5f1b3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +60,24 @@
     <ClInclude Include="UDPServer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="NativeLoader.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsCard.hpp">
+      <Filter>Header Files\GPUs</Filter>
+    </ClInclude>
+    <ClInclude Include="NvidiaGpu.hpp">
+      <Filter>Header Files\GPUs</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUMemorySensor.hpp">
+      <Filter>Header Files\API Handler\Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="IndividualSensorApi.hpp">
+      <Filter>Header Files\API Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="SensorListApi.hpp">
+      <Filter>Header Files\API Handler</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="entrypoint.cpp">
@@ -72,6 +93,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UDPServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsCard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

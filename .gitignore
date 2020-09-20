@@ -39,6 +39,9 @@ bld/
 *.lastbuildstate
 *.tlog
 *.ilk
+*.dll
+*.lib
+*.exp
 
 CMakeFiles/
 CMakeCache.txt

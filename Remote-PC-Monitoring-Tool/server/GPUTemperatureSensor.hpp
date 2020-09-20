@@ -1,4 +1,5 @@
 #pragma once
+#include "GraphicsCard.hpp"
 #include "Sensor.hpp"
 
 class GPUTemperatureSensor : public Sensor
@@ -22,7 +23,13 @@ public:
 	nlohmann::json getValue() override
 	{
 		nlohmann::json j;
-		j["value"] = 69.69;
+
+
+		static GraphicsCard* pGpu = GraphicsCard::GetGraphicsCard();
+		int deviceCount = pGpu->GetDeviceCount();
+		// todo: Add multi-GPU support
+		
+		j["value"] = deviceCount > 0 ? pGpu->GetDeviceTemp(0) : -1;
 		j["success"] = true;
 		return j;
 	}

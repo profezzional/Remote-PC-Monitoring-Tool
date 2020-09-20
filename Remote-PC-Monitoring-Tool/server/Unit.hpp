@@ -8,7 +8,8 @@ enum UnitEnum
 	Percentage = 0,
 	StorageGb = 1,
 	StorageMb = 2,
-	Temperature = 3
+	Temperature = 3,
+	Array = 4,
 };
 
 class Unit

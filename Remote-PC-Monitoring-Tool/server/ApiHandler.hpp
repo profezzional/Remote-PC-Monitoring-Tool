@@ -10,6 +10,7 @@
 class ApiHandler
 {
 public:
+	virtual ~ApiHandler() = default;
 	virtual std::string_view getUrl() = 0;
 	virtual void handler(const httplib::Request& request, httplib::Response& response) = 0;
 };
