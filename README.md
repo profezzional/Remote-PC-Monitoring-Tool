@@ -16,7 +16,7 @@ Cross-platform desktop client/server and mobile app to display and monitor PC vi
 ## Developer Docs
 
 * [Adding Sensors](docs/AddingSensors.md)
-*[**To-do list**](docs/todo.md)
+* [**To-do list**](docs/todo.md)
 
 ## Build Guide
 
