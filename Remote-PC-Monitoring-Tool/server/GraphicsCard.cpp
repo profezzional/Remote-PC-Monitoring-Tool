@@ -1,6 +1,7 @@
 #include "GraphicsCard.hpp"
 #include "NvidiaGpu.hpp"
 
+// todo: Add this file to CMakeLists.txt
 // todo: Change this so it doesn't leak memory
 GraphicsCard* GraphicsCard::GetGraphicsCard()
 {
