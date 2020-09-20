@@ -8,7 +8,7 @@ Cross-platform desktop client/server and mobile app to display and monitor PC vi
 | CPU Temp | Placeholder |
 | CPU Usage | Placeholder |
 | GPU Memory | Complete |
-| GPU Temperature | In-Dev |
+| GPU Temperature | Complete |
 | GPU Usage | Placeholder |
 | Memory Usage | Placeholder |
 

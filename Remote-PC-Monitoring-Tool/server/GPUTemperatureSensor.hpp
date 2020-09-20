@@ -29,7 +29,7 @@ public:
 		int deviceCount = pGpu->GetDeviceCount();
 		// todo: Add multi-GPU support
 		
-		j["value"] = deviceCount > 0 ? pGpu->GetDeviceTemp(0) : -1;
+		j["value"] = deviceCount > 0 ? pGpu->GetDeviceTemp(0) : 0;
 		j["success"] = true;
 		return j;
 	}
