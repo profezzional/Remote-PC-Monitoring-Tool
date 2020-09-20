@@ -12,9 +12,11 @@ Cross-platform desktop client/server and mobile app to display and monitor PC vi
 | GPU Usage | Placeholder |
 | Memory Usage | Placeholder |
 
+
 ## Developer Docs
 
-### [Adding Sensors](docs/AddingSensors.md)
+* [Adding Sensors](docs/AddingSensors.md)
+*[**To-do list**](docs/todo.md)
 
 ## Build Guide
 
