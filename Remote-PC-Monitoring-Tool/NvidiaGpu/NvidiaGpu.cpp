@@ -1,12 +1,13 @@
 #include "../server/target.hpp"
 #include <string>
 
+// todo: Add CMakeLists.txt file and update build scripts for this proj
 #include "NvidiaGpuCommon.hpp"
 #include <iostream>
 #include <nvml.h>
 #pragma comment(lib, "nvml.lib")
 
-
+// todo: Validate this works on linux
 #define EXPORT extern "C" _declspec(dllexport)
 
 void initialize()
@@ -28,6 +29,7 @@ EXPORT int GetDeviceCount()
 		return static_cast<int>(deviceCount);
 	}
 	std::cerr << result << std::endl;
+	// todo: Add proper nullable return type
 	return -1;
 }
 
@@ -43,6 +45,7 @@ EXPORT std::string GetDeviceName(int deviceIndex)
 			return std::string(deviceName);
 		}
 	}
+	// todo: Add proper nullable return type
 	return "ERROR";
 }
 
@@ -58,6 +61,7 @@ EXPORT double GetDeviceTemp(int deviceIndex)
 			return temp;
 		}
 	}
+	// todo: Add proper nullable return type
 	return -1;
 }
 
@@ -73,6 +77,7 @@ EXPORT MemoryInfo GetMemoryInfo(int deviceIndex)
 			return MemoryInfo{ memoryInfo.total, memoryInfo.free, memoryInfo.used };
 		}
 	}
+	// todo: Add proper nullable return type
 	return MemoryInfo{0, 0, 0};
 }
 
